@@ -3,44 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Ribh</title>
+  <title>Privacy Policy - Ribh</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 680px; margin: 60px auto; padding: 0 24px; color: #374151; line-height: 1.7; background: #F6F5F0; }
     h1 { color: #1A1C2E; font-size: 2rem; margin-bottom: 4px; }
     .date { color: #9CA3AF; font-size: 0.875rem; margin-bottom: 48px; }
     h2 { color: #1A1C2E; font-size: 1.1rem; margin-top: 36px; margin-bottom: 8px; }
+    li { margin-bottom: 6px; }
     a { color: #2E3FB7; }
   </style>
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="date">Last updated: June 13, 2026</p>
+  <p class="date">Last updated: November 1, 2026</p>
 
   <h2>1. Overview</h2>
-  <p>Ribh ("the app") is an offline-first inventory and profit tracking app for online sellers. We are committed to protecting your privacy.</p>
+  <p>Ribh ("the app") is an inventory and profit tracking app for online sellers. This policy explains what the app and our servers do with your data. It covers the Ribh app for iPhone, version 1.1.3, and the Ribh app for Android, version 1.1.1. Older versions may behave differently. Where the two apps differ, we say so.</p>
+  <p>We do not sell your data. The app shows no ads and includes no ad network SDK. On iPhone, Firebase Analytics is the version that could read Apple's advertising identifier, but the app does not ask for tracking permission, so it cannot read it. We do use outside services for sign-in, cloud storage, analytics, crash reports, purchases, AI features and email. Each one is named below with what it receives and why.</p>
+  <p>This policy is about the app. It does not describe the ribh.ma website in detail.</p>
 
-  <h2>2. Data stored on your device</h2>
-  <p>All business data you enter — items, sales, orders, expenses, and credit records — is stored locally on your device using SQLite. It never leaves your device unless you explicitly enable cloud sync (Pro/Expert feature).</p>
+  <h2>2. Data on your device</h2>
+  <p>Your items, sales, orders, expenses, credit records and customer details are saved in a database on your phone. Product photos you take or pick stay on your phone and are not uploaded by cloud sync. (Photos you send to an AI feature are covered in section 7.) Evening profit reminders are scheduled on your phone itself. We do not use a push notification service. On iPhone, your answers in the Plan Advisor quiz are not saved or sent.</p>
+  <p>This data stays on your phone until you uninstall the app. Deleting your account does not erase it from the phone.</p>
+  <p>Your phone's own backup (for example iCloud on iPhone or Google backup on Android) may also copy the app's data, depending on your phone settings. Android version 1.1.1 does not exclude anything from Android backup. Later Android versions still include the shop database (which holds the analytics install ID from section 5) but exclude the device-record ID from section 3 and the saved sign-in session.</p>
 
-  <h2>3. Account and cloud sync (optional)</h2>
-  <p>If you create an account, your email address is stored in our Supabase database (hosted in the EU) solely to authenticate you and sync your data across devices. We do not sell or share your email with third parties.</p>
+  <h2>3. Account and cloud sync</h2>
+  <p>You can try the app without an account. After you save your first product, sale or order, the app asks you to sign in or create an account. You can tap "Not now" once. From your third saved record on, the app asks again without a "Not now" option, so you should expect to need an account to keep adding records. It also asks before a purchase, a restore, an export or sync (and on iPhone, before you open the Invite screen or redeem a code).</p>
+  <p>Sign-in options:</p>
+  <ul>
+    <li><strong>Email.</strong> A one-time code, or email and password, with confirmation and password reset emails. Your email address is stored by Supabase, our sign-in and database provider. Passwords are stored by Supabase as hashes.</li>
+    <li><strong>Google sign-in.</strong> Offered on Android, not on iPhone. Google's account chooser runs on your phone and gives Supabase a sign-in token. Supabase then stores your Google email address, name and profile picture link.</li>
+    <li><strong>Phone number.</strong> Android version 1.1.1 shows a phone number option. It is switched off on our server and does not work today. If it were switched on, your phone number would be stored with your account.</li>
+    <li>Sign in with Apple is not offered.</li>
+  </ul>
+  <p>Supabase also keeps session tokens, sign-in times, and the IP address and device or browser details (user agent) of each sign-in session. These are removed when your account is deleted. We keep a profile record for each account: email address, plan and plan expiry, whether the plan is billed by Apple, Google or on the web, the product bought, app language, your shop and your role in it.</p>
+  <p>At first launch, both apps try to create an account with no email, just a random ID, when there is no session. At the time of this update our server refuses this, so cloud sync starts after you sign in with an account. If we ever allow it, your data would be backed up under that random ID before you add an email.</p>
+  <p>Cloud sync has no on/off switch and is not limited to paid plans. While you are signed in, the app copies your business data to our database, which is hosted by Supabase in Frankfurt, Germany (EU). This is used for backup, restoring on a new phone, using several phones and working with a team. The number of phones you can use at the same time depends on your plan. The copy includes:</p>
+  <ul>
+    <li>items (name, SKU, barcode, notes, buying price, amount paid, shipping-in cost, purchase date, stock, supplier and category), variants (with any price you set) and purchase batches;</li>
+    <li>sales (item, quantity, sale price, cost, date) and expenses (labels, amounts, dates, categories);</li>
+    <li>orders, including customer name, phone and city, notes, courier, cash-on-delivery amount, fees, status dates, order lines and payments;</li>
+    <li>customers who owe you money (name, phone) and the credit entries (amount, note);</li>
+    <li>suppliers (name, phone, notes), couriers (fees) and categories;</li>
+    <li>your shop name, your team, the app language, and the ID of the account that created each record.</li>
+  </ul>
+  <p>The app also keeps a device record for each signed-in phone: a random device ID, the device name (for example "Samsung Galaxy A14" or an iPhone model code), the platform, the time it was last seen, and whether it was revoked. It is updated each time you open the app and is used to apply your plan's device limit.</p>
+  <p>When you delete a record in the app, it is marked as deleted on our server and the row stays there until your account is deleted.</p>
 
-  <h2>4. Purchases and subscriptions</h2>
-  <p>Pro and Expert subscriptions are processed through Google Play or the Apple App Store. We do not collect or store your payment details. Subscription status is managed by RevenueCat and linked to your account by an anonymous user ID.</p>
+  <h2>4. Team members and invites</h2>
+  <p>A shop owner or manager can invite people by email and give them a role (owner, manager or staff). We store the invited email address and the role. Supabase creates a sign-in account for that address, and an invitation email is sent through our email provider (section 10). At the time of this update, the person is added to the shop right away. We may change this so that the person has to accept the invitation in the app first. Team members can see shop data according to their role, and the records they add carry their account ID.</p>
 
-  <h2>5. AI features (Expert)</h2>
-  <p>The AI order-intake feature sends message text you paste to Google Gemini to extract order details. This text is processed by Google and subject to Google's privacy policy. We do not store the message content on our servers.</p>
+  <h2>5. Analytics and crash reports</h2>
+  <p>These run for every user, signed in or not, on every plan. There is no consent screen and no setting in the app to turn them off.</p>
+  <ul>
+    <li><strong>Our own events table (Supabase, Frankfurt).</strong> Each install makes a random install ID. The app sends it with an event name, small values such as counts and labels (for example onboarding step, payment method, number of order lines, what triggered a sign-in request, notification permission yes or no), the app version, the platform and the time. Events include app open, onboarding steps, first product, first sale, products and orders added, orders delivered, quick sales, paywall shown and dismissed, purchase button taps, account requests, trial start, help screens opened, and a return on day 1 and day 7. This table does not hold your account ID, email, product names, prices or customer details. Our server receives your IP address with each request, as any server does, but it is not stored in that table. We use this to understand how sellers use the app and to measure our own campaigns.</li>
+    <li><strong>Campaign tags.</strong> At first launch the app may record which campaign, source or link brought you: on Android from the Google Play install referrer, on iPhone from the link that opened the app. If there is none, it records a label such as "organic".</li>
+    <li><strong>Google Firebase Analytics.</strong> Both apps include it. Many of the events above are also passed to it. It can also receive these events, which do include business content: when you add a product, the product name (first 100 characters), quantity and unit price in MAD; when you restock, the product name, quantity added and landed unit price; when you create an order, the number of lines, the cash-on-delivery amount and the payment method; when an order is delivered, the cash-on-delivery amount and the courier name; and the sign-in method when you sign up or log in. These events do not include customer names or phone numbers, and the app does not send your email or account ID with them. We have not confirmed whether Firebase collects all of this on every phone. It may also collect standard information on its own, such as an app instance ID, device model, operating system and app version, language and approximate country.</li>
+    <li><strong>Sentry (crash reports).</strong> When the app crashes or hits an error, it sends a report to Sentry's German (EU) servers: the error type and message, the technical trace, the app version, operating system, device model, language and device state, and session start and end to count crash-free use. The app does not attach your email or account ID. Error messages can occasionally include a short piece of text the app was handling, for example from a file you import. Sentry may also give each install a random identifier. Sentry receives the IP address of the request, as any server does, and we have not confirmed whether it keeps it.</li>
+  </ul>
+  <p>On Android we remove the advertising ID permission from the app. On iPhone the app does not show Apple's tracking permission prompt.</p>
 
-  <h2>6. Analytics and crash reporting</h2>
-  <p>We do not use third-party analytics or advertising SDKs. Crash reports are handled through Google Play / Apple App Store platforms and contain only technical device and error information.</p>
+  <h2>6. Purchases and subscriptions</h2>
+  <p>Pro and Expert subscriptions are paid through the Apple App Store or Google Play. We do not receive or store your card or other payment details. Apple and Google handle the payment under their own policies.</p>
+  <p>The app uses RevenueCat to manage plans. RevenueCat is set up each time the app starts, for every user, including free users. When you are signed in, RevenueCat identifies you by your Ribh account ID, a random ID that is linked to your account. Before you sign in it uses its own random ID. RevenueCat receives the purchase receipt, product, purchase times and store country from the store, and the standard technical data its software collects, such as IP address and device, operating system and app version. The app does not send your email address, name or phone number to RevenueCat. Our server also asks RevenueCat about your subscription, using your account ID, to confirm your plan.</p>
+  <p>RevenueCat sends purchase events to our server. We store each full event (account ID, product, store, price, currency, country, transaction IDs and times) in a log, and we save your plan, plan expiry, billing store and product on your profile.</p>
+  <p>If you buy a plan on the ribh.ma website, payment is handled by Paddle, and we keep your Paddle customer and subscription IDs on your profile.</p>
 
-  <h2>7. Children</h2>
-  <p>Ribh is not directed at children under 13. We do not knowingly collect data from children.</p>
+  <h2>7. AI features</h2>
+  <p>The app has several AI features: the help chat, a daily tip, Ask Ribh, reading a pasted customer message, reading a chat screenshot, reading a product photo or delivery photos to add stock, and matching the column names of a CSV file. Which ones you can use depends on your plan. The app sends your request to our server (Supabase Edge Functions), which sends it on to Google Gemini. We keep the Gemini key on the server.</p>
+  <p>What is sent:</p>
+  <ul>
+    <li>Help chat: the question you type and your language.</li>
+    <li>Daily tip: a summary of your shop (profit for the month, number of sales, top earning item, biggest cost, low stock items and counts). The app requests it automatically when a Pro or Expert user opens the dashboard.</li>
+    <li>Ask Ribh: the same summary plus the name, units sold, units left, profit and cost of every item, the total your customers owe you, and the question you type.</li>
+    <li>Pasted message: the text you paste, up to 8,000 characters.</li>
+    <li>Chat screenshot, product photo, delivery photos (up to 3): the image itself.</li>
+    <li>CSV import and courier reconciliation: the column header names, not the rows.</li>
+  </ul>
+  <p>Pasted messages and chat screenshots can contain your customers' names, phone numbers and cities. The app asks for your agreement the first time you send a photo or screenshot, and remembers your answer unless you clear the box. It does not ask before it sends typed help questions, pasted message text, CSV column names, the daily tip or Ask Ribh.</p>
+  <p>Our code does not save the content you send or Gemini's answers in our database. It saves a count of requests per account, day, feature and plan, and a daily count of photo searches per account to limit abuse. Our server logs (for example error logs) can hold short pieces of request data, such as an invited email address, an account ID, or up to a few hundred characters of a Gemini reply when the reply cannot be read. How long Google keeps this content, and where Google processes it, is set by Google. We have not confirmed those details.</p>
 
-  <h2>8. Data deletion</h2>
-  <p>You can delete all your data at any time from within the app (Settings → Delete account). This permanently removes your account and all synced data from our servers. Local data can be cleared by uninstalling the app.</p>
+  <h2>8. Lookups, WhatsApp and sharing</h2>
+  <ul>
+    <li><strong>Open Food Facts.</strong> When you scan or type a barcode to fill in a product name, the app sends the barcode straight from your phone to Open Food Facts. It sees the barcode and your IP address.</li>
+    <li><strong>Online product photos.</strong> During setup (this option is on unless you turn it off) and when you tap "Find photos online", the app sends the product name, and sometimes the category name, to our server. Our server asks public catalogues (iTunes, Open Library, Nintendo, Steam and Openverse, and eBay or Google image search when we have them switched on) for a picture. Your phone then downloads the picture from the website that hosts it, which sees your IP address.</li>
+    <li><strong>WhatsApp reminders and sharing.</strong> When you tap a credit reminder, the app opens WhatsApp with your customer's phone number and a message that can include the amount owed and your payment instructions. If there is no phone number, it opens the share sheet instead. When you export, print or share a file, it goes to the app you choose. Those apps receive that content under their own policies. We do not see it.</li>
+  </ul>
 
-  <h2>9. Contact</h2>
+  <h2>9. Free-month codes, trials and invites</h2>
+  <p>In iPhone version 1.1.3, when you open the Invite screen, start the 7-day Expert trial or redeem a code, the app proves to our server that the request comes from a genuine device. It sends your platform, a device identifier, and a check from Apple (App Attest and DeviceCheck). Our server verifies this with Apple. Android version 1.1.1 does not do this. Later Android versions are expected to do the same check using Google Play Integrity.</p>
+  <p>Our server stores scrambled (hashed) versions of the device identifier, your IP address and your email address, the App Attest public key, and the account IDs involved. This is used to stop one person claiming several free months or referral rewards. We have not set an expiry for these records.</p>
+
+  <h2>10. Emails we send</h2>
+  <p>We send sign-in codes, confirmation and password reset emails, and team invitations from hello@ribh.ma. They are sent through Resend, which receives the recipient address and the message. We have also sent a one-time email, through Resend, to people who had signed up with an email and stopped using the app. If you write to contact@ribh.ma, we receive your address and your message.</p>
+
+  <h2>11. Phone permissions</h2>
+  <ul>
+    <li><strong>Camera:</strong> to scan barcodes and photograph products. The app can be installed on Android phones that have no camera.</li>
+    <li><strong>Photo library (iPhone):</strong> to attach photos to items. Android uses the system picker.</li>
+    <li><strong>Notifications:</strong> asked after your first sale, for evening profit reminders. On Android the app also uses the "receive boot completed" permission to restore those reminders after a restart.</li>
+    <li><strong>Internet:</strong> for sync, sign-in, AI features, purchases and lookups.</li>
+    <li><strong>Location:</strong> the iPhone app contains a text about location, but it does not ask for or use your location.</li>
+  </ul>
+  <p>The app does not request access to your contacts or microphone.</p>
+
+  <h2>12. Who receives data</h2>
+  <ul>
+    <li><strong>Supabase:</strong> sign-in (including the IP address of sign-in sessions), your synced business data, profile, devices, our events table, purchase logs and AI request counts. Why: to run your account and backup.</li>
+    <li><strong>Google Firebase Analytics:</strong> the events in section 5. Why: product analytics.</li>
+    <li><strong>Sentry:</strong> crash and error reports. Why: to find and fix crashes.</li>
+    <li><strong>RevenueCat:</strong> purchase and plan data. Why: to unlock the right plan.</li>
+    <li><strong>Google Gemini, through our server:</strong> the AI content in section 7. Why: to run the AI features.</li>
+    <li><strong>Apple and Google:</strong> payments and receipts; Apple App Attest and DeviceCheck, and Google Play Integrity, for the checks in section 9; Google sign-in.</li>
+    <li><strong>Resend:</strong> email addresses and email content. Why: to deliver our emails.</li>
+    <li><strong>Open Food Facts and the photo catalogues in section 8:</strong> barcodes or product names. Why: to fill in product names and pictures.</li>
+    <li><strong>Paddle:</strong> web plan payments, if you buy on ribh.ma.</li>
+  </ul>
+
+  <h2>13. Where data is processed</h2>
+  <p>Our database and sign-in service run in Frankfurt, Germany (EU). Sentry reports go to Sentry's German region. We have not confirmed where Google (Firebase and Gemini), RevenueCat, Resend and the lookup services process data, or where our server functions run. Some of them may process data outside the EU and Morocco.</p>
+
+  <h2>14. How long we keep data</h2>
+  <ul>
+    <li>Your account and synced business data are kept until you delete your account. Records you delete in the app stay marked as deleted until then.</li>
+    <li>Our events table has no automatic deletion schedule.</li>
+    <li>Purchase logs have no automatic deletion schedule.</li>
+    <li>A daily request counter table, which also holds IP addresses from older versions of our AI features, has no automatic deletion schedule.</li>
+    <li>Hashed records for the checks in section 9 have no expiry.</li>
+    <li>Firebase, Sentry, RevenueCat, Resend and Google keep data under their own settings and policies. We have not set the periods ourselves.</li>
+    <li>Our hosting provider may keep backup copies for some time.</li>
+  </ul>
+
+  <h2>15. Data deletion</h2>
+  <p>The message in the app says "all your cloud data". The list below is the full picture, including what is not deleted.</p>
+  <p>To delete your account, sign in, then go to Settings, then Account, then Delete account. This deletes your sign-in account, your profile, the shops you own and all their data, and your device records and AI request counts from our database.</p>
+  <p>What is not deleted:</p>
+  <ul>
+    <li>If you own a shop with team members, deletion is refused unless the shop has a co-owner. If it has one, ownership passes to the co-owner and the shop stays. If deletion fails, contact us.</li>
+    <li>Records you added to someone else's shop stay there, no longer linked to your account.</li>
+    <li>We may keep a hashed version of your email address and the hashed device records in section 9, so that a free month cannot be claimed again.</li>
+    <li>Purchase logs, which include your account ID, stay in our logs. Other server log lines that contain an account ID or an invited email address are not edited either.</li>
+    <li>The daily request counter table in section 14 is not cleared when you delete your account.</li>
+    <li>Events already sent to our events table (they carry an install ID, not your account), to Firebase and to Sentry are not removed. Your RevenueCat record is not removed automatically.</li>
+    <li>Local data on your phone stays until you uninstall the app.</li>
+    <li>Backups kept by our hosting provider may still hold your data for some time.</li>
+    <li>Your Apple or Google subscription is not cancelled. Cancel it in your store account. If you have a web plan, deletion may cancel it.</li>
+  </ul>
+  <p>You can also email contact@ribh.ma and ask us to delete your data. We can ask RevenueCat to remove its record. Firebase and Sentry data is not linked to your account, so we cannot find it to delete it.</p>
+
+  <h2>16. Your rights</h2>
+  <p>Under Moroccan Law 09-08 and, if you are in the EU or EEA, the GDPR, you may have the right to access, correct or delete your personal data, to object to how it is used, and to get a copy of it. You can edit your records in the app and export them as CSV or text files. If you have no account yet, exporting asks you to sign in first. To use any right, email <a href="mailto:contact@ribh.ma">contact@ribh.ma</a> from the address on your account. Events in our own table carry a random install ID that is not linked to your account in our database, so we cannot find them by your email and may not be able to delete them. The same goes for data that Firebase and Sentry hold. If you are in the EU or EEA you may also complain to your local data protection authority.</p>
+
+  <h2>17. Children</h2>
+  <p>Ribh is a business tool and is not directed at children under 13. We do not knowingly collect data from children. Analytics run for every user and we do not know the age of a user. If you believe a child has given us data, contact us.</p>
+
+  <h2>18. Changes to this policy</h2>
+  <p>We may update this policy when the app or our services change. We will change the date at the top of this page when we do.</p>
+
+  <h2>19. Contact</h2>
   <p>Questions? Email us at <a href="mailto:contact@ribh.ma">contact@ribh.ma</a></p>
 </body>
 </html>
