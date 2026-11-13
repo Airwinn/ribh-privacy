@@ -16,12 +16,12 @@
   </style>
 </head>
 <body>
-  <p><a href="./">English</a></p>
+  <p><a href="index.html">English</a></p>
   <h1>Politique de confidentialité</h1>
   <p class="date">Dernière mise à jour : 14 novembre 2026</p>
 
   <h2>1. Vue d'ensemble</h2>
-  <p>Ribh (« l'app ») est une app de suivi de stock et de profit pour les vendeurs en ligne. Cette politique explique ce que l'app et nos serveurs font de tes données. Elle couvre l'app Ribh pour iPhone, version 1.1.3, et l'app Ribh pour Android, version 1.1.1. Les versions plus anciennes peuvent se comporter autrement. Quand les deux apps diffèrent, nous le disons. Le journal vocal et le studio photo, décrits en section 7, sont nouveaux dans la version 1.1.5 des apps iPhone et Android.</p>
+  <p>Ribh (« l'app ») est une app de suivi de stock et de profit pour les vendeurs en ligne. Cette politique explique ce que l'app et nos serveurs font de tes données. Elle couvre les apps Ribh pour iPhone et pour Android, jusqu'à la version 1.1.5 incluse. Quand une version ou les deux apps diffèrent, nous le disons (par exemple, certaines notes plus bas concernent uniquement la version Android 1.1.1). Le journal vocal et le studio photo, décrits en section 7, sont nouveaux dans la version 1.1.5 des apps iPhone et Android.</p>
   <p>Nous ne vendons pas tes données. L'app n'affiche aucune publicité et ne contient aucun SDK de régie publicitaire. Sur iPhone, Firebase Analytics pourrait lire l'identifiant publicitaire d'Apple, mais l'app ne demande pas l'autorisation de suivi, donc elle ne peut pas le lire. Nous utilisons des services extérieurs pour la connexion, le stockage dans le cloud, les statistiques, les rapports de plantage, les achats, les fonctions d'IA, les e-mails, la voix et les photos. Chacun est nommé plus bas avec ce qu'il reçoit et pourquoi.</p>
   <p>Cette politique concerne l'app. Elle ne décrit pas en détail le site ribh.ma.</p>
 
@@ -98,9 +98,9 @@
   <p>Le studio photo transforme une photo de produit en photo de boutique propre. La première fois que tu l'utilises, l'app t'indique que la photo est envoyée à Google Gemini et te demande ton accord.</p>
   <ul>
     <li><strong>Ce qui est envoyé :</strong> une photo que tu choisis ou prends, réduite sur ton téléphone à 1280 pixels au plus sur le grand côté et débarrassée de sa localisation et de ses autres métadonnées, et le style choisi. Notre serveur retire à nouveau les métadonnées restantes. Aucun texte que tu tapes n'atteint la consigne donnée au modèle.</li>
-    <li><strong>Google comme sous-traitant :</strong> la photo passe par notre serveur jusqu'à un modèle d'image Google Gemini, selon les mêmes conditions payantes de l'API. Google ne l'utilise pas pour entraîner ses modèles. N'utilise pas une photo que tu ne veux pas partager.</li>
+    <li><strong>Google Gemini :</strong> la photo passe par notre serveur jusqu'à un modèle d'image Google Gemini, qui fabrique la nouvelle photo. Les conditions propres de Google s'appliquent à la façon dont il traite la photo. Nous n'avons pas confirmé si Google la garde ni s'il l'utilise pour autre chose. N'utilise pas une photo que tu ne veux pas partager.</li>
     <li><strong>Conservation :</strong> notre serveur ne stocke ni la photo ni le résultat. Ils restent en mémoire le temps de la requête puis sont supprimés. La nouvelle photo est renvoyée à ton téléphone. Elle n'est enregistrée dans ta photothèque que si tu l'enregistres, et ta photo d'origine n'est pas modifiée. Nous gardons un compteur d'usages du studio par compte pour appliquer la limite de ton plan. Ce compteur suit ton adresse e-mail, sous forme hachée, pour que supprimer puis recréer un compte ne donne pas un nouveau quota.</li>
-    <li><strong>Conservation chez Google :</strong> comme ci-dessus, fixée par Google et non confirmée par nous.</li>
+    <li><strong>Conservation chez Google :</strong> fixée par Google et non confirmée par nous.</li>
   </ul>
   <h3>Ton contrôle et la suppression</h3>
   <p>Les deux fonctions sont facultatives. Rien n'est enregistré ni envoyé tant que tu ne touches pas le micro ou n'envoies pas une photo au studio, et tu peux refuser la permission du microphone dans les réglages de ton téléphone (le reste de l'app continue de fonctionner). Comme nous ne gardons ni l'audio ni les photos du studio, il n'y a rien à supprimer de ce côté chez nous. Pour supprimer ce que tu en as enregistré (une vente, une commande, un client), supprime l'enregistrement dans l'app, ou supprime ton compte comme décrit en section 15. Les extraits et photos déjà traités par Google relèvent de sa conservation décrite plus haut. Nous ne pouvons ni les voir ni les supprimer.</p>
@@ -115,9 +115,9 @@
     <li><strong>Rappels WhatsApp et partage.</strong> Quand tu touches un rappel de crédit, l'app ouvre WhatsApp avec le numéro de ton client et un message pouvant contenir le montant dû et tes instructions de paiement. S'il n'y a pas de numéro, elle ouvre la feuille de partage. Quand tu exportes, imprimes ou partages un fichier, il va à l'app que tu choisis. Ces apps reçoivent ce contenu selon leurs propres politiques. Nous ne le voyons pas.</li>
   </ul>
 
-  <h2>9. Mois offerts, essais et invitations</h2>
-  <p>Dans la version iPhone 1.1.3, quand tu ouvres l'écran Inviter, démarres l'essai Expert de 7 jours ou utilises un code, l'app prouve à notre serveur que la demande vient d'un vrai appareil. Elle envoie ta plateforme, un identifiant d'appareil et une vérification d'Apple (App Attest et DeviceCheck). Notre serveur la vérifie auprès d'Apple. La version Android 1.1.1 ne le fait pas. Les versions Android suivantes devraient faire la même vérification avec Google Play Integrity.</p>
-  <p>Notre serveur stocke des versions brouillées (hachées) de l'identifiant d'appareil, de ton adresse IP et de ton e-mail, la clé publique App Attest et les identifiants de compte concernés. Cela sert à empêcher une même personne de réclamer plusieurs mois offerts ou récompenses de parrainage. Nous n'avons pas fixé de durée d'expiration pour ces enregistrements.</p>
+  <h2>9. Codes « mois offerts », essais et invitations</h2>
+  <p>Dans l'app iPhone, à partir de la version 1.1.3, quand tu ouvres l'écran Inviter, démarres l'essai Expert de 14 jours ou utilises un code, l'app prouve à notre serveur que la demande vient d'un vrai appareil. Elle envoie ta plateforme, un identifiant d'appareil et une vérification d'Apple (App Attest et DeviceCheck). Notre serveur la vérifie auprès d'Apple. La version Android 1.1.1 ne le fait pas. Les versions Android suivantes devraient faire la même vérification avec Google Play Integrity.</p>
+  <p>Notre serveur stocke des versions brouillées (hachées) de l'identifiant d'appareil, de ton adresse IP et de ton e-mail, la clé publique App Attest et les identifiants de compte concernés. Cela sert à empêcher une même personne de réclamer plusieurs fois des « mois offerts » (le nom de la fonction de codes) ou des récompenses de parrainage. Nous n'avons pas fixé de durée d'expiration pour ces enregistrements.</p>
 
   <h2>10. E-mails que nous envoyons</h2>
   <p>Nous envoyons les codes de connexion, les e-mails de confirmation et de réinitialisation, et les invitations d'équipe depuis hello@ribh.ma. Ils passent par Resend, qui reçoit l'adresse du destinataire et le message. Nous avons aussi envoyé un e-mail unique, via Resend, à des personnes inscrites avec un e-mail qui avaient cessé d'utiliser l'app. Si tu écris à contact@ribh.ma, nous recevons ton adresse et ton message.</p>
@@ -168,7 +168,7 @@
   <ul>
     <li>Si tu possèdes une boutique avec des membres d'équipe, la suppression est refusée sauf s'il y a un copropriétaire. S'il y en a un, la propriété lui passe et la boutique reste. Si la suppression échoue, contacte-nous.</li>
     <li>Les enregistrements que tu as ajoutés dans la boutique de quelqu'un d'autre y restent, sans lien avec ton compte.</li>
-    <li>Nous pouvons garder une version hachée de ton e-mail et les fiches d'appareils hachées de la section 9, pour qu'un mois offert ne puisse pas être réclamé de nouveau.</li>
+    <li>Nous pouvons garder une version hachée de ton e-mail et les fiches d'appareils hachées de la section 9, pour qu'un « mois offert » (le nom de la fonction de codes) ne puisse pas être réclamé de nouveau.</li>
     <li>Les journaux d'achat, qui contiennent l'identifiant de ton compte, restent dans nos journaux. Les autres lignes de journal serveur contenant un identifiant de compte ou un e-mail invité ne sont pas modifiées non plus.</li>
     <li>Le quota du studio, qui suit un e-mail haché (section 7), et la table quotidienne de compteurs de la section 14 ne sont pas effacés quand tu supprimes ton compte.</li>
     <li>Les événements déjà envoyés à notre table d'événements (ils portent un identifiant d'installation, pas ton compte), à Firebase et à Sentry ne sont pas supprimés. Ta fiche RevenueCat n'est pas supprimée automatiquement.</li>

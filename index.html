@@ -21,7 +21,7 @@
   <p class="date">Last updated: November 14, 2026</p>
 
   <h2>1. Overview</h2>
-  <p>Ribh ("the app") is an inventory and profit tracking app for online sellers. This policy explains what the app and our servers do with your data. It covers the Ribh app for iPhone, version 1.1.3, and the Ribh app for Android, version 1.1.1. Older versions may behave differently. Where the two apps differ, we say so. The voice log and the photo studio, described in section 7, are new in version 1.1.5 of the iPhone and Android apps.</p>
+  <p>Ribh ("the app") is an inventory and profit tracking app for online sellers. This policy explains what the app and our servers do with your data. It covers the Ribh apps for iPhone and for Android, up to and including version 1.1.5. Where a version or the two apps differ, we say so (for example, some notes below are about Android version 1.1.1 only). The voice log and the photo studio, described in section 7, are new in version 1.1.5 of the iPhone and Android apps.</p>
   <p>We do not sell your data. The app shows no ads and includes no ad network SDK. On iPhone, Firebase Analytics is the version that could read Apple's advertising identifier, but the app does not ask for tracking permission, so it cannot read it. We do use outside services for sign-in, cloud storage, analytics, crash reports, purchases, AI features email, voice and photo features. Each one is named below with what it receives and why.</p>
   <p>This policy is about the app. It does not describe the ribh.ma website in detail.</p>
 
@@ -97,9 +97,9 @@
   <p>The photo studio turns a photo of a product into a clean shop photo. The first time you use it, the app tells you that the photo is sent to Google Gemini and asks you to agree.</p>
   <ul>
     <li><strong>What is sent:</strong> one photo you pick or take, reduced on your phone to at most 1280 pixels on its longest side with its location and other metadata removed, and the style you chose. Our server removes any remaining metadata again. No text you type reaches the prompt.</li>
-    <li><strong>Google as processor:</strong> the photo goes through our server to a Google Gemini image model, under the same paid API terms. Google does not use it to train its models. Do not use a photo you do not want to share.</li>
+    <li><strong>Google Gemini:</strong> the photo goes through our server to a Google Gemini image model, which makes the new photo. Google's own terms apply to how it handles the photo. We have not confirmed whether Google keeps it or uses it for anything else. Do not use a photo you do not want to share.</li>
     <li><strong>Retention:</strong> our server does not store the photo or the result. They are held in memory for the request and dropped. The new photo is returned to your phone. It is saved to your photo library only if you save it, and your original photo is not changed. We keep a count of studio uses per account to apply your plan's limit. This count follows your email address, as a hashed value, so that deleting and re-creating an account does not give a new allowance.</li>
-    <li><strong>Google's own retention:</strong> as above, set by Google and not confirmed by us.</li>
+    <li><strong>Google's own retention:</strong> set by Google and not confirmed by us.</li>
   </ul>
   <h3>Your control and deleting</h3>
   <p>Both features are optional. Nothing is recorded or sent unless you tap the mic or send a photo to the studio, and you can refuse the microphone permission in your phone settings (the rest of the app keeps working). Because we do not keep the audio or the studio photos, there is nothing of them to delete on our side. To delete what you saved from them (a sale, an order, a customer) delete the record in the app, or delete your account as described in section 15. Clips and photos already processed by Google fall under Google's retention above. We cannot see or delete them.</p>
@@ -115,7 +115,7 @@
   </ul>
 
   <h2>9. Free-month codes, trials and invites</h2>
-  <p>In iPhone version 1.1.3, when you open the Invite screen, start the 7-day Expert trial or redeem a code, the app proves to our server that the request comes from a genuine device. It sends your platform, a device identifier, and a check from Apple (App Attest and DeviceCheck). Our server verifies this with Apple. Android version 1.1.1 does not do this. Later Android versions are expected to do the same check using Google Play Integrity.</p>
+  <p>In the iPhone app, from version 1.1.3, when you open the Invite screen, start the 14-day Expert trial or redeem a code, the app proves to our server that the request comes from a genuine device. It sends your platform, a device identifier, and a check from Apple (App Attest and DeviceCheck). Our server verifies this with Apple. Android version 1.1.1 does not do this. Later Android versions are expected to do the same check using Google Play Integrity.</p>
   <p>Our server stores scrambled (hashed) versions of the device identifier, your IP address and your email address, the App Attest public key, and the account IDs involved. This is used to stop one person claiming several free months or referral rewards. We have not set an expiry for these records.</p>
 
   <h2>10. Emails we send</h2>
