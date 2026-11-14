@@ -4,22 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - Ribh</title>
+  <link rel="alternate" hreflang="fr" href="https://privacy.ribh.ma/fr.html" />
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 680px; margin: 60px auto; padding: 0 24px; color: #374151; line-height: 1.7; background: #F6F5F0; }
     h1 { color: #1A1C2E; font-size: 2rem; margin-bottom: 4px; }
     .date { color: #9CA3AF; font-size: 0.875rem; margin-bottom: 48px; }
+    h3 { color: #1A1C2E; font-size: 1rem; margin-top: 24px; margin-bottom: 6px; }
     h2 { color: #1A1C2E; font-size: 1.1rem; margin-top: 36px; margin-bottom: 8px; }
     li { margin-bottom: 6px; }
     a { color: #2E3FB7; }
   </style>
 </head>
 <body>
+  <p><a href="fr.html">Français</a></p>
   <h1>Privacy Policy</h1>
-  <p class="date">Last updated: November 1, 2026</p>
+  <p class="date">Last updated: November 14, 2026</p>
 
   <h2>1. Overview</h2>
-  <p>Ribh ("the app") is an inventory and profit tracking app for online sellers. This policy explains what the app and our servers do with your data. It covers the Ribh app for iPhone, version 1.1.3, and the Ribh app for Android, version 1.1.1. Older versions may behave differently. Where the two apps differ, we say so.</p>
-  <p>We do not sell your data. The app shows no ads and includes no ad network SDK. On iPhone, Firebase Analytics is the version that could read Apple's advertising identifier, but the app does not ask for tracking permission, so it cannot read it. We do use outside services for sign-in, cloud storage, analytics, crash reports, purchases, AI features and email. Each one is named below with what it receives and why.</p>
+  <p>Ribh ("the app") is an inventory and profit tracking app for online sellers. This policy explains what the app and our servers do with your data. It covers the Ribh apps for iPhone and for Android, up to and including version 1.1.5. Where a version or the two apps differ, we say so (for example, some notes below are about Android version 1.1.1 only). The voice log and the photo studio, described in section 7, are new in version 1.1.5 of the iPhone and Android apps.</p>
+  <p>We do not sell your data. The app shows no ads and includes no ad network SDK. On iPhone, Firebase Analytics is the version that could read Apple's advertising identifier, but the app does not ask for tracking permission, so it cannot read it. We do use outside services for sign-in, cloud storage, analytics, crash reports, purchases, AI features, email, voice and photo features. Each one is named below with what it receives and why.</p>
   <p>This policy is about the app. It does not describe the ribh.ma website in detail.</p>
 
   <h2>2. Data on your device</h2>
@@ -58,7 +61,7 @@
   <ul>
     <li><strong>Our own events table (Supabase, Frankfurt).</strong> Each install makes a random install ID. The app sends it with an event name, small values such as counts and labels (for example onboarding step, payment method, number of order lines, what triggered a sign-in request, notification permission yes or no), the app version, the platform and the time. Events include app open, onboarding steps, first product, first sale, products and orders added, orders delivered, quick sales, paywall shown and dismissed, purchase button taps, account requests, trial start, help screens opened, and a return on day 1 and day 7. This table does not hold your account ID, email, product names, prices or customer details. Our server receives your IP address with each request, as any server does, but it is not stored in that table. We use this to understand how sellers use the app and to measure our own campaigns.</li>
     <li><strong>Campaign tags.</strong> At first launch the app may record which campaign, source or link brought you: on Android from the Google Play install referrer, on iPhone from the link that opened the app. If there is none, it records a label such as "organic".</li>
-    <li><strong>Google Firebase Analytics.</strong> Both apps include it. Many of the events above are also passed to it. It can also receive these events, which do include business content: when you add a product, the product name (first 100 characters), quantity and unit price in MAD; when you restock, the product name, quantity added and landed unit price; when you create an order, the number of lines, the cash-on-delivery amount and the payment method; when an order is delivered, the cash-on-delivery amount and the courier name; and the sign-in method when you sign up or log in. These events do not include customer names or phone numbers, and the app does not send your email or account ID with them. We have not confirmed whether Firebase collects all of this on every phone. It may also collect standard information on its own, such as an app instance ID, device model, operating system and app version, language and approximate country.</li>
+    <li><strong>Google Firebase Analytics.</strong> Both apps include it. Many of the events above are also passed to it, with the same kind of small values (counts and labels). From version 1.1.4 (and so in 1.1.5) the business events it receives carry counts only: when you add a product, the quantity; when you restock, the quantity added; when you create an order, the number of lines and the payment method; when an order is delivered, no values; and the sign-in method when you sign up or log in. They do not include product names, prices, cash-on-delivery amounts, courier names, customer names or phone numbers, and the app does not send your email or account ID with them. Note about iPhone 1.1.3 and Android 1.1.1: those older builds may still send product names, prices, cash-on-delivery amounts and courier names in these events. We have not confirmed whether Firebase collects all of this on every phone. It may also collect standard information on its own, such as an app instance ID, device model, operating system and app version, language and approximate country.</li>
     <li><strong>Sentry (crash reports).</strong> When the app crashes or hits an error, it sends a report to Sentry's German (EU) servers: the error type and message, the technical trace, the app version, operating system, device model, language and device state, and session start and end to count crash-free use. The app does not attach your email or account ID. Error messages can occasionally include a short piece of text the app was handling, for example from a file you import. Sentry may also give each install a random identifier. Sentry receives the IP address of the request, as any server does, and we have not confirmed whether it keeps it.</li>
   </ul>
   <p>On Android we remove the advertising ID permission from the app. On iPhone the app does not show Apple's tracking permission prompt.</p>
@@ -70,7 +73,7 @@
   <p>If you buy a plan on the ribh.ma website, payment is handled by Paddle, and we keep your Paddle customer and subscription IDs on your profile.</p>
 
   <h2>7. AI features</h2>
-  <p>The app has several AI features: the help chat, a daily tip, Ask Ribh, reading a pasted customer message, reading a chat screenshot, reading a product photo or delivery photos to add stock, and matching the column names of a CSV file. Which ones you can use depends on your plan. The app sends your request to our server (Supabase Edge Functions), which sends it on to Google Gemini. We keep the Gemini key on the server.</p>
+  <p>The app has several AI features: the voice log, the photo studio, the help chat, a daily tip, Ask Ribh, reading a pasted customer message, reading a chat screenshot, reading a product photo or delivery photos to add stock, and matching the column names of a CSV file. Which ones you can use depends on your plan. The app sends your request to our server (Supabase Edge Functions), which sends it on to Google Gemini. We keep the Gemini key on the server.</p>
   <p>What is sent:</p>
   <ul>
     <li>Help chat: the question you type and your language.</li>
@@ -78,9 +81,30 @@
     <li>Ask Ribh: the same summary plus the name, units sold, units left, profit and cost of every item, the total your customers owe you, and the question you type.</li>
     <li>Pasted message: the text you paste, up to 8,000 characters.</li>
     <li>Chat screenshot, product photo, delivery photos (up to 3): the image itself.</li>
+    <li>Voice log and photo studio: see the two sections below.</li>
     <li>CSV import and courier reconciliation: the column header names, not the rows.</li>
   </ul>
-  <p>Pasted messages and chat screenshots can contain your customers' names, phone numbers and cities. The app asks for your agreement the first time you send a photo or screenshot, and remembers your answer unless you clear the box. It does not ask before it sends typed help questions, pasted message text, CSV column names, the daily tip or Ask Ribh.</p>
+  <h3>Voice log (version 1.1.5)</h3>
+  <p>The voice log lets you say a sale, a purchase, an expense or a cash-on-delivery order out loud instead of typing it. It uses the microphone only after you tap the mic button, and only while the recording runs. The recording is stopped automatically after about 20 seconds. Ribh never listens in the background.</p>
+  <ul>
+    <li><strong>What is sent:</strong> the audio clip (up to about 20 seconds, compressed), your language, and, for a sale, purchase or expense, the names of up to 60 of your products (never their prices) so that what you say can be matched to your stock. For a spoken order, no product names are sent, only the names of up to 30 of your couriers. If you say them, the clip contains a customer's first name, phone number and city, and the courier.</li>
+    <li><strong>Where it goes:</strong> from your phone to our server (Supabase Edge Functions), then to Google Gemini (our server may first count the clip's size with Google, and may retry on a second Gemini model if the first fails), which listens to the clip and returns a draft: item, amount, and for an order the customer name, phone, city, courier, products and cash to collect. You check the draft before anything is saved.</li>
+    <li><strong>Google as processor:</strong> Google processes the clip on our behalf under the paid terms of the Gemini API. Under those terms Google does not use it to train its models.</li>
+    <li><strong>Retention:</strong> our server does not store the audio. It is held in memory for the length of the request and dropped. No file, table or log line of ours contains it. The phone deletes its own temporary copy as soon as the call ends. The draft you save is stored like any other sale, expense or order (sections 2 and 3). We keep a count of voice requests per account and day to apply your plan's limit.</li>
+    <li><strong>Google's own retention:</strong> Google may keep requests for a short time under its own terms, for example to detect abuse. We have not set that period and have not confirmed it.</li>
+  </ul>
+  <h3>Photo studio (version 1.1.5)</h3>
+  <p>The photo studio turns a photo of a product into a clean shop photo. The first time you use it, the app tells you that the photo is sent to Google Gemini and asks you to agree.</p>
+  <ul>
+    <li><strong>What is sent:</strong> one photo you pick or take, reduced on your phone to at most 1280 pixels on its longest side with its location and other metadata removed, and the style you chose. Our server removes any remaining metadata again. No text you type reaches the prompt.</li>
+    <li><strong>Google Gemini:</strong> the photo goes through our server to a Google Gemini image model, which makes the new photo. Google's own terms apply to how it handles the photo. We have not confirmed whether Google keeps it or uses it for anything else. Do not use a photo you do not want to share.</li>
+    <li><strong>Retention:</strong> our server does not store the photo or the result. They are held in memory for the request and dropped. The new photo is returned to your phone. It is saved to your photo library only if you save it, and your original photo is not changed. We keep a count of studio uses per account to apply your plan's limit. This count follows your email address, as a hashed value, so that deleting and re-creating an account does not give a new allowance.</li>
+    <li><strong>Google's own retention:</strong> set by Google and not confirmed by us.</li>
+  </ul>
+  <h3>Your control and deleting</h3>
+  <p>Both features are optional. Nothing is recorded or sent unless you tap the mic or send a photo to the studio, and you can refuse the microphone permission in your phone settings (the rest of the app keeps working). Because we do not keep the audio or the studio photos, there is nothing of them to delete on our side. To delete what you saved from them (a sale, an order, a customer) delete the record in the app, or delete your account as described in section 15. Clips and photos already processed by Google fall under Google's retention above. We cannot see or delete them.</p>
+
+  <p>Pasted messages and chat screenshots can contain your customers' names, phone numbers and cities. The app asks for your agreement the first time you send a photo or screenshot, and remembers your answer unless you clear the box. It also asks the first time you use the voice log or the photo studio. It does not ask before it sends typed help questions, pasted message text, CSV column names, the daily tip or Ask Ribh.</p>
   <p>Our code does not save the content you send or Gemini's answers in our database. It saves a count of requests per account, day, feature and plan, and a daily count of photo searches per account to limit abuse. Our server logs (for example error logs) can hold short pieces of request data, such as an invited email address, an account ID, or up to a few hundred characters of a Gemini reply when the reply cannot be read. How long Google keeps this content, and where Google processes it, is set by Google. We have not confirmed those details.</p>
 
   <h2>8. Lookups, WhatsApp and sharing</h2>
@@ -91,7 +115,7 @@
   </ul>
 
   <h2>9. Free-month codes, trials and invites</h2>
-  <p>In iPhone version 1.1.3, when you open the Invite screen, start the 7-day Expert trial or redeem a code, the app proves to our server that the request comes from a genuine device. It sends your platform, a device identifier, and a check from Apple (App Attest and DeviceCheck). Our server verifies this with Apple. Android version 1.1.1 does not do this. Later Android versions are expected to do the same check using Google Play Integrity.</p>
+  <p>In the iPhone app, from version 1.1.3, when you open the Invite screen, start the Expert trial (14 days from version 1.1.4, 7 days in 1.1.3) or redeem a code, the app proves to our server that the request comes from a genuine device. It sends your platform, a device identifier, and a check from Apple (App Attest and DeviceCheck). Our server verifies this with Apple. Android version 1.1.1 does not do this. Android from version 1.1.4 does the same check using Google Play Integrity.</p>
   <p>Our server stores scrambled (hashed) versions of the device identifier, your IP address and your email address, the App Attest public key, and the account IDs involved. This is used to stop one person claiming several free months or referral rewards. We have not set an expiry for these records.</p>
 
   <h2>10. Emails we send</h2>
@@ -100,20 +124,21 @@
   <h2>11. Phone permissions</h2>
   <ul>
     <li><strong>Camera:</strong> to scan barcodes and photograph products. The app can be installed on Android phones that have no camera.</li>
-    <li><strong>Photo library (iPhone):</strong> to attach photos to items. Android uses the system picker.</li>
+    <li><strong>Microphone:</strong> asked the first time you tap the mic in the voice log (version 1.1.5), to record the short clip you speak. It is used only while you record. iPhone shows: "Ribh listens when you tap the mic to log a sale, a purchase or a cost by voice. Ribh does not keep the clip." On Android the app declares the record audio permission. The app works without it, and the microphone is not required to install.</li>
+    <li><strong>Photo library (iPhone):</strong> to attach photos to items, and to save studio photos when you choose to. Android uses the system picker.</li>
     <li><strong>Notifications:</strong> asked after your first sale, for evening profit reminders. On Android the app also uses the "receive boot completed" permission to restore those reminders after a restart.</li>
     <li><strong>Internet:</strong> for sync, sign-in, AI features, purchases and lookups.</li>
     <li><strong>Location:</strong> the iPhone app contains a text about location, but it does not ask for or use your location.</li>
   </ul>
-  <p>The app does not request access to your contacts or microphone.</p>
+  <p>The app does not request access to your contacts. It uses the microphone only for the voice log, as described above.</p>
 
   <h2>12. Who receives data</h2>
   <ul>
     <li><strong>Supabase:</strong> sign-in (including the IP address of sign-in sessions), your synced business data, profile, devices, our events table, purchase logs and AI request counts. Why: to run your account and backup.</li>
-    <li><strong>Google Firebase Analytics:</strong> the events in section 5. Why: product analytics.</li>
+    <li><strong>Google Firebase Analytics:</strong> the events in section 5 (counts and labels only, from version 1.1.4). Why: product analytics.</li>
     <li><strong>Sentry:</strong> crash and error reports. Why: to find and fix crashes.</li>
     <li><strong>RevenueCat:</strong> purchase and plan data. Why: to unlock the right plan.</li>
-    <li><strong>Google Gemini, through our server:</strong> the AI content in section 7. Why: to run the AI features.</li>
+    <li><strong>Google Gemini, through our server, as our processor:</strong> the AI content in section 7, including voice clips (with customer name, phone, city and courier if you say them) and studio photos. Why: to run the AI features.</li>
     <li><strong>Apple and Google:</strong> payments and receipts; Apple App Attest and DeviceCheck, and Google Play Integrity, for the checks in section 9; Google sign-in.</li>
     <li><strong>Resend:</strong> email addresses and email content. Why: to deliver our emails.</li>
     <li><strong>Open Food Facts and the photo catalogues in section 8:</strong> barcodes or product names. Why: to fill in product names and pictures.</li>
@@ -126,6 +151,7 @@
   <h2>14. How long we keep data</h2>
   <ul>
     <li>Your account and synced business data are kept until you delete your account. Records you delete in the app stay marked as deleted until then.</li>
+    <li>Voice clips and studio photos are not stored by us (section 7). Google keeps them under its own terms, which we have not confirmed.</li>
     <li>Our events table has no automatic deletion schedule.</li>
     <li>Purchase logs have no automatic deletion schedule.</li>
     <li>A daily request counter table, which also holds IP addresses from older versions of our AI features, has no automatic deletion schedule.</li>
@@ -134,7 +160,7 @@
     <li>Our hosting provider may keep backup copies for some time.</li>
   </ul>
 
-  <h2>15. Data deletion</h2>
+  <h2 id="deletion">15. Data deletion</h2>
   <p>The message in the app says "all your cloud data". The list below is the full picture, including what is not deleted.</p>
   <p>To delete your account, sign in, then go to Settings, then Account, then Delete account. This deletes your sign-in account, your profile, the shops you own and all their data, and your device records and AI request counts from our database.</p>
   <p>What is not deleted:</p>
@@ -143,8 +169,9 @@
     <li>Records you added to someone else's shop stay there, no longer linked to your account.</li>
     <li>We may keep a hashed version of your email address and the hashed device records in section 9, so that a free month cannot be claimed again.</li>
     <li>Purchase logs, which include your account ID, stay in our logs. Other server log lines that contain an account ID or an invited email address are not edited either.</li>
-    <li>The daily request counter table in section 14 is not cleared when you delete your account.</li>
+    <li>The studio allowance record, which follows a hashed email address (section 7) and the daily request counter table in section 14 are not cleared when you delete your account.</li>
     <li>Events already sent to our events table (they carry an install ID, not your account), to Firebase and to Sentry are not removed. Your RevenueCat record is not removed automatically.</li>
+    <li>Voice clips and studio photos held by Google fall under Google's own retention. We cannot see or delete them.</li>
     <li>Local data on your phone stays until you uninstall the app.</li>
     <li>Backups kept by our hosting provider may still hold your data for some time.</li>
     <li>Your Apple or Google subscription is not cancelled. Cancel it in your store account. If you have a web plan, deletion may cancel it.</li>

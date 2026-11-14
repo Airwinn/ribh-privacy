@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité - Ribh</title>
+  <link rel="alternate" hreflang="en" href="https://privacy.ribh.ma/" />
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 680px; margin: 60px auto; padding: 0 24px; color: #374151; line-height: 1.7; background: #F6F5F0; }
+    h1 { color: #1A1C2E; font-size: 2rem; margin-bottom: 4px; }
+    .date { color: #9CA3AF; font-size: 0.875rem; margin-bottom: 48px; }
+    h3 { color: #1A1C2E; font-size: 1rem; margin-top: 24px; margin-bottom: 6px; }
+    h2 { color: #1A1C2E; font-size: 1.1rem; margin-top: 36px; margin-bottom: 8px; }
+    li { margin-bottom: 6px; }
+    a { color: #2E3FB7; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">English</a></p>
+  <h1>Politique de confidentialité</h1>
+  <p class="date">Dernière mise à jour : 14 novembre 2026</p>
+
+  <h2>1. Vue d'ensemble</h2>
+  <p>Ribh (« l'app ») est une app de suivi de stock et de profit pour les vendeurs en ligne. Cette politique explique ce que l'app et nos serveurs font de tes données. Elle couvre les apps Ribh pour iPhone et pour Android, jusqu'à la version 1.1.5 incluse. Quand une version ou les deux apps diffèrent, nous le disons (par exemple, certaines notes plus bas concernent uniquement la version Android 1.1.1). Le journal vocal et le studio photo, décrits en section 7, sont nouveaux dans la version 1.1.5 des apps iPhone et Android.</p>
+  <p>Nous ne vendons pas tes données. L'app n'affiche aucune publicité et ne contient aucun SDK de régie publicitaire. Sur iPhone, Firebase Analytics pourrait lire l'identifiant publicitaire d'Apple, mais l'app ne demande pas l'autorisation de suivi, donc elle ne peut pas le lire. Nous utilisons des services extérieurs pour la connexion, le stockage dans le cloud, les statistiques, les rapports de plantage, les achats, les fonctions d'IA, les e-mails, la voix et les photos. Chacun est nommé plus bas avec ce qu'il reçoit et pourquoi.</p>
+  <p>Cette politique concerne l'app. Elle ne décrit pas en détail le site ribh.ma.</p>
+
+  <h2>2. Données sur ton téléphone</h2>
+  <p>Tes articles, ventes, commandes, dépenses, crédits et fiches clients sont enregistrés dans une base de données sur ton téléphone. Les photos de produits que tu prends ou choisis restent sur ton téléphone et ne sont pas envoyées par la synchronisation cloud. (Les photos envoyées à une fonction d'IA sont décrites en section 7.) Les rappels de profit du soir sont programmés sur ton téléphone lui-même. Nous n'utilisons aucun service de notifications push. Sur iPhone, tes réponses au quiz du Conseiller de plan ne sont ni enregistrées ni envoyées.</p>
+  <p>Ces données restent sur ton téléphone jusqu'à la désinstallation de l'app. Supprimer ton compte ne les efface pas du téléphone.</p>
+  <p>La sauvegarde de ton téléphone (par exemple iCloud sur iPhone ou la sauvegarde Google sur Android) peut aussi copier les données de l'app, selon tes réglages. La version Android 1.1.1 n'exclut rien de la sauvegarde Android. Les versions Android suivantes incluent encore la base de ta boutique (qui contient l'identifiant d'installation des statistiques, section 5) mais excluent l'identifiant d'appareil de la section 3 et la session de connexion enregistrée.</p>
+
+  <h2>3. Compte et synchronisation cloud</h2>
+  <p>Tu peux essayer l'app sans compte. Après ton premier produit, ta première vente ou commande enregistré, l'app te propose de te connecter ou de créer un compte. Tu peux toucher « Pas maintenant » une fois. À partir de ton troisième enregistrement, l'app te le redemande sans « Pas maintenant » : compte sur un compte pour continuer à ajouter des données. Elle le demande aussi avant un achat, une restauration, un export ou une synchronisation (et sur iPhone, avant d'ouvrir l'écran Inviter ou d'utiliser un code).</p>
+  <p>Moyens de connexion :</p>
+  <ul>
+    <li><strong>E-mail.</strong> Un code à usage unique, ou e-mail et mot de passe, avec e-mails de confirmation et de réinitialisation. Ton adresse e-mail est stockée par Supabase, notre fournisseur de connexion et de base de données. Les mots de passe sont stockés par Supabase sous forme de hachages.</li>
+    <li><strong>Connexion Google.</strong> Proposée sur Android, pas sur iPhone. Le sélecteur de compte Google s'exécute sur ton téléphone et donne un jeton de connexion à Supabase. Supabase stocke alors ton adresse e-mail Google, ton nom et le lien de ta photo de profil.</li>
+    <li><strong>Numéro de téléphone.</strong> La version Android 1.1.1 affiche cette option. Elle est désactivée sur notre serveur et ne fonctionne pas aujourd'hui. Si elle était activée, ton numéro serait stocké avec ton compte.</li>
+    <li>La connexion avec Apple n'est pas proposée.</li>
+  </ul>
+  <p>Supabase conserve aussi les jetons de session, les heures de connexion, l'adresse IP et les détails de l'appareil ou du navigateur (user agent) de chaque session. Ils sont supprimés avec ton compte. Nous gardons une fiche de profil par compte : adresse e-mail, plan et date d'expiration, facturation par Apple, Google ou le web, produit acheté, langue de l'app, ta boutique et ton rôle.</p>
+  <p>Au premier lancement, les deux apps essaient de créer un compte sans e-mail, avec un simple identifiant aléatoire, quand il n'y a pas de session. À la date de cette mise à jour, notre serveur le refuse : la synchronisation démarre donc après ta connexion avec un compte. Si nous l'autorisons un jour, tes données seraient sauvegardées sous cet identifiant aléatoire avant que tu ajoutes un e-mail.</p>
+  <p>La synchronisation cloud n'a pas d'interrupteur et n'est pas réservée aux plans payants. Tant que tu es connecté, l'app copie tes données professionnelles dans notre base, hébergée par Supabase à Francfort, en Allemagne (UE). Cela sert à la sauvegarde, à la restauration sur un nouveau téléphone, à l'usage sur plusieurs téléphones et au travail en équipe. Le nombre de téléphones simultanés dépend de ton plan. La copie contient :</p>
+  <ul>
+    <li>les articles (nom, SKU, code-barres, notes, prix d'achat, montant payé, frais de port d'achat, date d'achat, stock, fournisseur et catégorie), les variantes (avec le prix éventuel) et les lots d'achat ;</li>
+    <li>les ventes (article, quantité, prix de vente, coût, date) et les dépenses (libellés, montants, dates, catégories) ;</li>
+    <li>les commandes, avec nom, téléphone et ville du client, notes, transporteur, montant à encaisser à la livraison, frais, dates de statut, lignes de commande et paiements ;</li>
+    <li>les clients qui te doivent de l'argent (nom, téléphone) et les lignes de crédit (montant, note) ;</li>
+    <li>les fournisseurs (nom, téléphone, notes), les transporteurs (frais) et les catégories ;</li>
+    <li>le nom de ta boutique, ton équipe, la langue de l'app et l'identifiant du compte qui a créé chaque enregistrement.</li>
+  </ul>
+  <p>L'app garde aussi une fiche d'appareil pour chaque téléphone connecté : un identifiant d'appareil aléatoire, le nom de l'appareil (par exemple « Samsung Galaxy A14 » ou un code de modèle d'iPhone), la plateforme, l'heure de dernière activité et si l'appareil a été révoqué. Elle est mise à jour à chaque ouverture de l'app et sert à appliquer la limite d'appareils de ton plan.</p>
+  <p>Quand tu supprimes un enregistrement dans l'app, il est marqué comme supprimé sur notre serveur et la ligne y reste jusqu'à la suppression de ton compte.</p>
+
+  <h2>4. Équipe et invitations</h2>
+  <p>Un propriétaire ou gérant de boutique peut inviter des personnes par e-mail et leur donner un rôle (propriétaire, gérant ou employé). Nous stockons l'adresse invitée et le rôle. Supabase crée un compte de connexion pour cette adresse, et un e-mail d'invitation part via notre fournisseur d'e-mails (section 10). À la date de cette mise à jour, la personne est ajoutée tout de suite à la boutique. Nous pourrions changer cela pour qu'elle doive d'abord accepter l'invitation dans l'app. Les membres de l'équipe voient les données de la boutique selon leur rôle, et les enregistrements qu'ils ajoutent portent l'identifiant de leur compte.</p>
+
+  <h2>5. Statistiques et rapports de plantage</h2>
+  <p>Ils fonctionnent pour tous les utilisateurs, connectés ou non, sur tous les plans. Il n'y a ni écran de consentement ni réglage pour les désactiver.</p>
+  <ul>
+    <li><strong>Notre propre table d'événements (Supabase, Francfort).</strong> Chaque installation crée un identifiant aléatoire. L'app l'envoie avec un nom d'événement, de petites valeurs comme des nombres et des libellés (par exemple l'étape d'accueil, le mode de paiement, le nombre de lignes de commande, ce qui a déclenché une demande de connexion, la permission de notifications oui ou non), la version de l'app, la plateforme et l'heure. Les événements incluent l'ouverture de l'app, les étapes d'accueil, le premier produit, la première vente, les produits et commandes ajoutés, les commandes livrées, les ventes rapides, l'affichage et la fermeture du paywall, les touches sur le bouton d'achat, les demandes de compte, le début d'essai, l'ouverture des écrans d'aide, et un retour à J+1 et J+7. Cette table ne contient ni ton identifiant de compte, ni ton e-mail, ni noms de produits, prix ou données clients. Notre serveur reçoit ton adresse IP à chaque requête, comme tout serveur, mais elle n'est pas stockée dans cette table. Nous l'utilisons pour comprendre comment les vendeurs utilisent l'app et pour mesurer nos propres campagnes.</li>
+    <li><strong>Étiquettes de campagne.</strong> Au premier lancement, l'app peut enregistrer la campagne, la source ou le lien qui t'a amené : sur Android via le référent d'installation de Google Play, sur iPhone via le lien qui a ouvert l'app. S'il n'y en a pas, elle enregistre un libellé comme « organic ».</li>
+    <li><strong>Google Firebase Analytics.</strong> Les deux apps l'incluent. Beaucoup des événements ci-dessus lui sont aussi transmis, avec le même genre de petites valeurs (nombres et libellés). Depuis la version 1.1.4 (donc en 1.1.5), les événements professionnels qu'il reçoit ne portent que des nombres : à l'ajout d'un produit, la quantité ; au réassort, la quantité ajoutée ; à la création d'une commande, le nombre de lignes et le mode de paiement ; à la livraison d'une commande, aucune valeur ; et la méthode de connexion à l'inscription ou la connexion. Ils ne contiennent ni noms de produits, ni prix, ni montants à encaisser à la livraison, ni noms de transporteurs, ni noms ou numéros de clients, et l'app n'envoie pas ton e-mail ni ton identifiant de compte avec eux. Remarque sur iPhone 1.1.3 et Android 1.1.1 : ces anciennes versions peuvent encore envoyer des noms de produits, des prix, des montants à encaisser et des noms de transporteurs dans ces événements. Nous n'avons pas confirmé si Firebase collecte tout cela sur chaque téléphone. Il peut aussi collecter de lui-même des informations standard, comme un identifiant d'instance d'app, le modèle d'appareil, le système, la version de l'app, la langue et le pays approximatif.</li>
+    <li><strong>Sentry (rapports de plantage).</strong> Quand l'app plante ou rencontre une erreur, elle envoie un rapport aux serveurs allemands (UE) de Sentry : type et message d'erreur, trace technique, version de l'app, système, modèle d'appareil, langue et état de l'appareil, début et fin de session pour compter l'usage sans plantage. L'app n'y joint ni ton e-mail ni ton identifiant de compte. Un message d'erreur peut parfois contenir un court morceau de texte que l'app traitait, par exemple d'un fichier importé. Sentry peut aussi attribuer un identifiant aléatoire à chaque installation. Sentry reçoit l'adresse IP de la requête, comme tout serveur, et nous n'avons pas confirmé s'il la conserve.</li>
+  </ul>
+  <p>Sur Android, nous retirons de l'app la permission de l'identifiant publicitaire. Sur iPhone, l'app n'affiche pas la demande de suivi d'Apple.</p>
+
+  <h2>6. Achats et abonnements</h2>
+  <p>Les abonnements Pro et Expert sont payés via l'App Store d'Apple ou Google Play. Nous ne recevons ni ne stockons ta carte ni d'autres données de paiement. Apple et Google gèrent le paiement selon leurs propres politiques.</p>
+  <p>L'app utilise RevenueCat pour gérer les plans. RevenueCat est initialisé à chaque démarrage de l'app, pour tous les utilisateurs, y compris ceux du plan Gratuit. Quand tu es connecté, RevenueCat t'identifie par l'identifiant de ton compte Ribh, un identifiant aléatoire lié à ton compte. Avant la connexion, il utilise son propre identifiant aléatoire. RevenueCat reçoit du magasin le reçu d'achat, le produit, les dates d'achat et le pays du magasin, ainsi que les données techniques standard que son logiciel collecte, comme l'adresse IP, l'appareil, le système et la version de l'app. L'app n'envoie à RevenueCat ni ton e-mail, ni ton nom, ni ton numéro. Notre serveur interroge aussi RevenueCat sur ton abonnement, avec l'identifiant de ton compte, pour confirmer ton plan.</p>
+  <p>RevenueCat envoie les événements d'achat à notre serveur. Nous stockons chaque événement complet (identifiant de compte, produit, magasin, prix, devise, pays, identifiants de transaction et dates) dans un journal, et nous enregistrons ton plan, son expiration, le magasin de facturation et le produit sur ton profil.</p>
+  <p>Si tu achètes un plan sur le site ribh.ma, le paiement est géré par Paddle, et nous gardons tes identifiants client et abonnement Paddle sur ton profil.</p>
+
+  <h2>7. Fonctions d'IA</h2>
+  <p>L'app a plusieurs fonctions d'IA : le journal vocal, le studio photo, le chat d'aide, un conseil du jour, Demande à Ribh, la lecture d'un message client collé, la lecture d'une capture de discussion, la lecture d'une photo de produit ou de photos de livraison pour ajouter du stock, et la correspondance des noms de colonnes d'un fichier CSV. Celles que tu peux utiliser dépendent de ton plan. L'app envoie ta demande à notre serveur (Supabase Edge Functions), qui la transmet à Google Gemini. La clé Gemini reste sur le serveur.</p>
+  <p>Ce qui est envoyé :</p>
+  <ul>
+    <li>Chat d'aide : la question que tu tapes et ta langue.</li>
+    <li>Conseil du jour : un résumé de ta boutique (profit du mois, nombre de ventes, article le plus rentable, plus grosse dépense, articles en stock bas et nombres). L'app le demande automatiquement quand un utilisateur Pro ou Expert ouvre le tableau de bord.</li>
+    <li>Demande à Ribh : le même résumé, plus le nom, les unités vendues, les unités restantes, le profit et le coût de chaque article, le total que tes clients te doivent, et la question que tu tapes.</li>
+    <li>Message collé : le texte que tu colles, jusqu'à 8 000 caractères.</li>
+    <li>Capture de discussion, photo de produit, photos de livraison (jusqu'à 3) : l'image elle-même.</li>
+    <li>Import CSV et rapprochement des transporteurs : les noms des colonnes, pas les lignes.</li>
+    <li>Journal vocal et studio photo : voir les deux sections ci-dessous.</li>
+  </ul>
+
+  <h3>Journal vocal (version 1.1.5)</h3>
+  <p>Le journal vocal te permet de dire à voix haute une vente, un achat, une dépense ou une commande avec paiement à la livraison au lieu de la taper. Il utilise le microphone seulement après que tu as touché le bouton micro, et seulement pendant l'enregistrement. L'enregistrement s'arrête automatiquement après environ 20 secondes. Ribh n'écoute jamais en arrière-plan.</p>
+  <ul>
+    <li><strong>Ce qui est envoyé :</strong> l'extrait audio (jusqu'à environ 20 secondes, compressé), ta langue, et, pour une vente, un achat ou une dépense, les noms de 60 de tes produits au plus (jamais leurs prix) pour faire correspondre ce que tu dis à ton stock. Pour une commande dite à voix haute, aucun nom de produit n'est envoyé, seulement les noms de 30 de tes transporteurs au plus. Si tu les dis, l'extrait contient le prénom d'un client, son numéro de téléphone et sa ville, et le transporteur.</li>
+    <li><strong>Où ça va :</strong> de ton téléphone à notre serveur (Supabase Edge Functions), puis à Google Gemini (notre serveur peut d'abord faire mesurer la taille de l'extrait par Google, et réessayer avec un second modèle Gemini si le premier échoue), qui écoute l'extrait et renvoie un brouillon : article, montant, et pour une commande le nom du client, son téléphone, sa ville, le transporteur, les produits et la somme à encaisser. Tu vérifies le brouillon avant que quoi que ce soit soit enregistré.</li>
+    <li><strong>Google comme sous-traitant :</strong> Google traite l'extrait pour notre compte selon les conditions payantes de l'API Gemini. Selon ces conditions, Google ne l'utilise pas pour entraîner ses modèles.</li>
+    <li><strong>Conservation :</strong> notre serveur ne stocke pas l'audio. Il reste en mémoire le temps de la requête puis est supprimé. Aucun fichier, aucune table, aucune ligne de journal de chez nous ne le contient. Le téléphone supprime sa copie temporaire dès la fin de l'appel. Le brouillon que tu enregistres est stocké comme n'importe quelle vente, dépense ou commande (sections 2 et 3). Nous gardons un compteur de demandes vocales par compte et par jour pour appliquer la limite de ton plan.</li>
+    <li><strong>Conservation chez Google :</strong> Google peut garder les requêtes un court moment selon ses propres conditions, par exemple pour détecter les abus. Nous n'avons pas fixé cette durée et ne l'avons pas confirmée.</li>
+  </ul>
+  <h3>Studio photo (version 1.1.5)</h3>
+  <p>Le studio photo transforme une photo de produit en photo de boutique propre. La première fois que tu l'utilises, l'app t'indique que la photo est envoyée à Google Gemini et te demande ton accord.</p>
+  <ul>
+    <li><strong>Ce qui est envoyé :</strong> une photo que tu choisis ou prends, réduite sur ton téléphone à 1280 pixels au plus sur le grand côté et débarrassée de sa localisation et de ses autres métadonnées, et le style choisi. Notre serveur retire à nouveau les métadonnées restantes. Aucun texte que tu tapes n'atteint la consigne donnée au modèle.</li>
+    <li><strong>Google Gemini :</strong> la photo passe par notre serveur jusqu'à un modèle d'image Google Gemini, qui fabrique la nouvelle photo. Les conditions propres de Google s'appliquent à la façon dont il traite la photo. Nous n'avons pas confirmé si Google la garde ni s'il l'utilise pour autre chose. N'utilise pas une photo que tu ne veux pas partager.</li>
+    <li><strong>Conservation :</strong> notre serveur ne stocke ni la photo ni le résultat. Ils restent en mémoire le temps de la requête puis sont supprimés. La nouvelle photo est renvoyée à ton téléphone. Elle n'est enregistrée dans ta photothèque que si tu l'enregistres, et ta photo d'origine n'est pas modifiée. Nous gardons un compteur d'usages du studio par compte pour appliquer la limite de ton plan. Ce compteur suit ton adresse e-mail, sous forme hachée, pour que supprimer puis recréer un compte ne donne pas un nouveau quota.</li>
+    <li><strong>Conservation chez Google :</strong> fixée par Google et non confirmée par nous.</li>
+  </ul>
+  <h3>Ton contrôle et la suppression</h3>
+  <p>Les deux fonctions sont facultatives. Rien n'est enregistré ni envoyé tant que tu ne touches pas le micro ou n'envoies pas une photo au studio, et tu peux refuser la permission du microphone dans les réglages de ton téléphone (le reste de l'app continue de fonctionner). Comme nous ne gardons ni l'audio ni les photos du studio, il n'y a rien à supprimer de ce côté chez nous. Pour supprimer ce que tu en as enregistré (une vente, une commande, un client), supprime l'enregistrement dans l'app, ou supprime ton compte comme décrit en section 15. Les extraits et photos déjà traités par Google relèvent de sa conservation décrite plus haut. Nous ne pouvons ni les voir ni les supprimer.</p>
+
+  <p>Les messages collés et les captures de discussion peuvent contenir les noms, numéros et villes de tes clients. L'app demande ton accord la première fois que tu envoies une photo ou une capture, et s'en souvient sauf si tu décoches la case. Elle le demande aussi la première fois que tu utilises le journal vocal ou le studio photo. Elle ne demande rien avant d'envoyer les questions d'aide tapées, le texte de messages collés, les noms de colonnes CSV, le conseil du jour ou Demande à Ribh.</p>
+  <p>Notre code n'enregistre ni le contenu que tu envoies ni les réponses de Gemini dans notre base. Il enregistre un nombre de requêtes par compte, jour, fonction et plan, et un nombre quotidien de recherches de photos par compte pour limiter les abus. Nos journaux de serveur (par exemple les journaux d'erreurs) peuvent contenir de courts morceaux de données de requête, comme une adresse e-mail invitée, un identifiant de compte, ou jusqu'à quelques centaines de caractères d'une réponse de Gemini quand elle est illisible. La durée pendant laquelle Google garde ce contenu, et le lieu où Google le traite, sont fixés par Google. Nous n'avons pas confirmé ces détails.</p>
+
+  <h2>8. Recherches, WhatsApp et partage</h2>
+  <ul>
+    <li><strong>Open Food Facts.</strong> Quand tu scannes ou tapes un code-barres pour remplir un nom de produit, l'app envoie le code-barres directement de ton téléphone à Open Food Facts. Il voit le code-barres et ton adresse IP.</li>
+    <li><strong>Photos de produits en ligne.</strong> Pendant la configuration (option activée sauf si tu la désactives) et quand tu touches « Trouver des photos en ligne », l'app envoie le nom du produit, et parfois le nom de la catégorie, à notre serveur. Notre serveur interroge des catalogues publics (iTunes, Open Library, Nintendo, Steam et Openverse, et la recherche d'images eBay ou Google quand nous les activons) pour trouver une image. Ton téléphone télécharge ensuite l'image depuis le site qui l'héberge, qui voit ton adresse IP.</li>
+    <li><strong>Rappels WhatsApp et partage.</strong> Quand tu touches un rappel de crédit, l'app ouvre WhatsApp avec le numéro de ton client et un message pouvant contenir le montant dû et tes instructions de paiement. S'il n'y a pas de numéro, elle ouvre la feuille de partage. Quand tu exportes, imprimes ou partages un fichier, il va à l'app que tu choisis. Ces apps reçoivent ce contenu selon leurs propres politiques. Nous ne le voyons pas.</li>
+  </ul>
+
+  <h2>9. Codes « mois offerts », essais et invitations</h2>
+  <p>Dans l'app iPhone, à partir de la version 1.1.3, quand tu ouvres l'écran Inviter, démarres l'essai Expert (14 jours depuis la version 1.1.4, 7 jours en 1.1.3) ou utilises un code, l'app prouve à notre serveur que la demande vient d'un vrai appareil. Elle envoie ta plateforme, un identifiant d'appareil et une vérification d'Apple (App Attest et DeviceCheck). Notre serveur la vérifie auprès d'Apple. La version Android 1.1.1 ne le fait pas. Android, depuis la version 1.1.4, fait la même vérification avec Google Play Integrity.</p>
+  <p>Notre serveur stocke des versions brouillées (hachées) de l'identifiant d'appareil, de ton adresse IP et de ton e-mail, la clé publique App Attest et les identifiants de compte concernés. Cela sert à empêcher une même personne de réclamer plusieurs fois des « mois offerts » (le nom de la fonction de codes) ou des récompenses de parrainage. Nous n'avons pas fixé de durée d'expiration pour ces enregistrements.</p>
+
+  <h2>10. E-mails que nous envoyons</h2>
+  <p>Nous envoyons les codes de connexion, les e-mails de confirmation et de réinitialisation, et les invitations d'équipe depuis hello@ribh.ma. Ils passent par Resend, qui reçoit l'adresse du destinataire et le message. Nous avons aussi envoyé un e-mail unique, via Resend, à des personnes inscrites avec un e-mail qui avaient cessé d'utiliser l'app. Si tu écris à contact@ribh.ma, nous recevons ton adresse et ton message.</p>
+
+  <h2>11. Permissions du téléphone</h2>
+  <ul>
+    <li><strong>Appareil photo :</strong> pour scanner des codes-barres et photographier tes produits. L'app peut être installée sur des téléphones Android sans appareil photo.</li>
+    <li><strong>Microphone :</strong> demandé la première fois que tu touches le micro du journal vocal (version 1.1.5), pour enregistrer le court extrait que tu dis. Il n'est utilisé que pendant l'enregistrement. L'iPhone affiche (en anglais) : « Ribh listens when you tap the mic to log a sale, a purchase or a cost by voice. Ribh does not keep the clip. ». Sur Android, l'app déclare la permission d'enregistrement audio. L'app fonctionne sans elle, et le microphone n'est pas nécessaire pour l'installer.</li>
+    <li><strong>Photothèque (iPhone) :</strong> pour joindre des photos aux articles, et pour enregistrer les photos du studio quand tu le décides. Android utilise le sélecteur du système.</li>
+    <li><strong>Notifications :</strong> demandées après ta première vente, pour les rappels de profit du soir. Sur Android, l'app utilise aussi la permission « démarrage terminé » pour rétablir ces rappels après un redémarrage.</li>
+    <li><strong>Internet :</strong> pour la synchronisation, la connexion, les fonctions d'IA, les achats et les recherches.</li>
+    <li><strong>Localisation :</strong> l'app iPhone contient un texte sur la localisation, mais elle ne demande ni n'utilise ta position.</li>
+  </ul>
+  <p>L'app ne demande pas l'accès à tes contacts. Elle n'utilise le microphone que pour le journal vocal, comme décrit plus haut.</p>
+
+  <h2>12. Qui reçoit des données</h2>
+  <ul>
+    <li><strong>Supabase :</strong> la connexion (y compris l'adresse IP des sessions), tes données professionnelles synchronisées, le profil, les appareils, notre table d'événements, les journaux d'achat et les compteurs de requêtes d'IA. Pourquoi : faire fonctionner ton compte et la sauvegarde.</li>
+    <li><strong>Google Firebase Analytics :</strong> les événements de la section 5 (nombres et libellés seulement, depuis la version 1.1.4). Pourquoi : statistiques d'usage.</li>
+    <li><strong>Sentry :</strong> rapports de plantage et d'erreur. Pourquoi : trouver et corriger les plantages.</li>
+    <li><strong>RevenueCat :</strong> données d'achat et de plan. Pourquoi : débloquer le bon plan.</li>
+    <li><strong>Google Gemini, via notre serveur, comme notre sous-traitant :</strong> le contenu d'IA de la section 7, y compris les extraits vocaux (avec nom du client, téléphone, ville et transporteur si tu les dis) et les photos du studio. Pourquoi : faire fonctionner les fonctions d'IA.</li>
+    <li><strong>Apple et Google :</strong> paiements et reçus ; Apple App Attest et DeviceCheck, et Google Play Integrity, pour les vérifications de la section 9 ; connexion Google.</li>
+    <li><strong>Resend :</strong> adresses e-mail et contenu des e-mails. Pourquoi : envoyer nos e-mails.</li>
+    <li><strong>Open Food Facts et les catalogues de photos de la section 8 :</strong> codes-barres ou noms de produits. Pourquoi : remplir noms et images.</li>
+    <li><strong>Paddle :</strong> paiements des plans web, si tu achètes sur ribh.ma.</li>
+  </ul>
+
+  <h2>13. Où les données sont traitées</h2>
+  <p>Notre base de données et notre service de connexion fonctionnent à Francfort, en Allemagne (UE). Les rapports Sentry vont dans la région allemande de Sentry. Nous n'avons pas confirmé où Google (Firebase et Gemini), RevenueCat, Resend et les services de recherche traitent les données, ni où nos fonctions serveur s'exécutent. Certains peuvent traiter des données hors de l'UE et du Maroc.</p>
+
+  <h2>14. Durée de conservation</h2>
+  <ul>
+    <li>Ton compte et tes données professionnelles synchronisées sont gardés jusqu'à la suppression de ton compte. Les enregistrements que tu supprimes dans l'app restent marqués comme supprimés jusque-là.</li>
+    <li>Les extraits vocaux et les photos du studio ne sont pas stockés chez nous (section 7). Google les garde selon ses propres conditions, que nous n'avons pas confirmées.</li>
+    <li>Notre table d'événements n'a pas de suppression automatique programmée.</li>
+    <li>Les journaux d'achat n'ont pas de suppression automatique programmée.</li>
+    <li>Une table quotidienne de compteurs de requêtes, qui contient aussi des adresses IP des anciennes versions de nos fonctions d'IA, n'a pas de suppression automatique programmée.</li>
+    <li>Les enregistrements hachés pour les vérifications de la section 9 n'expirent pas.</li>
+    <li>Firebase, Sentry, RevenueCat, Resend et Google gardent des données selon leurs propres réglages et politiques. Nous n'avons pas fixé nous-mêmes ces durées.</li>
+    <li>Notre hébergeur peut garder des copies de sauvegarde pendant un certain temps.</li>
+  </ul>
+
+  <h2 id="deletion">15. Suppression des données</h2>
+  <p>Le message dans l'app dit « toutes tes données cloud ». La liste ci-dessous donne le tableau complet, y compris ce qui n'est pas supprimé.</p>
+  <p>Pour supprimer ton compte, connecte-toi, puis va dans Réglages, puis Compte, puis Supprimer le compte. Cela supprime de notre base ton compte de connexion, ton profil, les boutiques dont tu es propriétaire et toutes leurs données, tes fiches d'appareils et tes compteurs de requêtes d'IA.</p>
+  <p>Ce qui n'est pas supprimé :</p>
+  <ul>
+    <li>Si tu possèdes une boutique avec des membres d'équipe, la suppression est refusée sauf s'il y a un copropriétaire. S'il y en a un, la propriété lui passe et la boutique reste. Si la suppression échoue, contacte-nous.</li>
+    <li>Les enregistrements que tu as ajoutés dans la boutique de quelqu'un d'autre y restent, sans lien avec ton compte.</li>
+    <li>Nous pouvons garder une version hachée de ton e-mail et les fiches d'appareils hachées de la section 9, pour qu'un « mois offert » (le nom de la fonction de codes) ne puisse pas être réclamé de nouveau.</li>
+    <li>Les journaux d'achat, qui contiennent l'identifiant de ton compte, restent dans nos journaux. Les autres lignes de journal serveur contenant un identifiant de compte ou un e-mail invité ne sont pas modifiées non plus.</li>
+    <li>Le quota du studio, qui suit un e-mail haché (section 7), et la table quotidienne de compteurs de la section 14 ne sont pas effacés quand tu supprimes ton compte.</li>
+    <li>Les événements déjà envoyés à notre table d'événements (ils portent un identifiant d'installation, pas ton compte), à Firebase et à Sentry ne sont pas supprimés. Ta fiche RevenueCat n'est pas supprimée automatiquement.</li>
+    <li>Les extraits vocaux et photos du studio détenus par Google relèvent de sa propre conservation. Nous ne pouvons ni les voir ni les supprimer.</li>
+    <li>Les données locales sur ton téléphone restent jusqu'à la désinstallation de l'app.</li>
+    <li>Les sauvegardes de notre hébergeur peuvent encore contenir tes données pendant un certain temps.</li>
+    <li>Ton abonnement Apple ou Google n'est pas résilié. Résilie-le dans ton compte du magasin. Si tu as un plan web, la suppression peut le résilier.</li>
+  </ul>
+  <p>Tu peux aussi écrire à contact@ribh.ma pour demander la suppression de tes données. Nous pouvons demander à RevenueCat de supprimer sa fiche. Les données Firebase et Sentry ne sont pas liées à ton compte, donc nous ne pouvons pas les retrouver pour les supprimer.</p>
+
+  <h2>16. Tes droits</h2>
+  <p>Selon la loi marocaine 09-08 et, si tu es dans l'UE ou l'EEE, le RGPD, tu peux avoir le droit d'accéder à tes données personnelles, de les corriger ou de les supprimer, de t'opposer à leur usage et d'en obtenir une copie. Tu peux modifier tes enregistrements dans l'app et les exporter en fichiers CSV ou texte. Si tu n'as pas encore de compte, l'export te demande d'abord de te connecter. Pour exercer un droit, écris à contact@ribh.ma depuis l'adresse de ton compte. Les événements de notre propre table portent un identifiant d'installation aléatoire non lié à ton compte dans notre base : nous ne pouvons donc pas les retrouver par ton e-mail et pourrons ne pas pouvoir les supprimer. Il en va de même pour les données que détiennent Firebase et Sentry. Si tu es dans l'UE ou l'EEE, tu peux aussi saisir l'autorité de protection des données de ton pays.</p>
+
+  <h2>17. Enfants</h2>
+  <p>Ribh est un outil professionnel et ne s'adresse pas aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données d'enfants. Les statistiques fonctionnent pour tous et nous ne connaissons pas l'âge d'un utilisateur. Si tu penses qu'un enfant nous a donné des données, contacte-nous.</p>
+
+  <h2>18. Modifications de cette politique</h2>
+  <p>Nous pouvons mettre à jour cette politique quand l'app ou nos services changent. Nous changerons la date en haut de cette page à ce moment-là.</p>
+
+  <h2>19. Contact</h2>
+  <p>Une question ? Écris-nous à <a href="mailto:contact@ribh.ma">contact@ribh.ma</a></p>
+</body>
+</html>
