@@ -70,7 +70,7 @@
   <p>Les abonnements Pro et Expert sont payés via l'App Store d'Apple ou Google Play. Nous ne recevons ni ne stockons ta carte ni d'autres données de paiement. Apple et Google gèrent le paiement selon leurs propres politiques.</p>
   <p>L'app utilise RevenueCat pour gérer les plans. RevenueCat est initialisé à chaque démarrage de l'app, pour tous les utilisateurs, y compris ceux du plan Gratuit. Quand tu es connecté, RevenueCat t'identifie par l'identifiant de ton compte Ribh, un identifiant aléatoire lié à ton compte. Avant la connexion, il utilise son propre identifiant aléatoire. RevenueCat reçoit du magasin le reçu d'achat, le produit, les dates d'achat et le pays du magasin, ainsi que les données techniques standard que son logiciel collecte, comme l'adresse IP, l'appareil, le système et la version de l'app. L'app n'envoie à RevenueCat ni ton e-mail, ni ton nom, ni ton numéro. Notre serveur interroge aussi RevenueCat sur ton abonnement, avec l'identifiant de ton compte, pour confirmer ton plan.</p>
   <p>RevenueCat envoie les événements d'achat à notre serveur. Nous stockons chaque événement complet (identifiant de compte, produit, magasin, prix, devise, pays, identifiants de transaction et dates) dans un journal, et nous enregistrons ton plan, son expiration, le magasin de facturation et le produit sur ton profil.</p>
-  <p>Si tu achètes un plan sur le site ribh.ma, le paiement est géré par Paddle, et nous gardons tes identifiants client et abonnement Paddle sur ton profil.</p>
+  <p>Si tu achètes un plan sur le site ribh.ma, la commande est gérée par Paddle, qui est le marchand officiel (merchant of record) et le revendeur pour les paiements web. Paddle reçoit ton nom, ton adresse e-mail, ton pays et tes données de paiement, et gère lui-même le paiement, les factures et les remboursements selon sa propre politique de confidentialité (https://www.paddle.com/legal/privacy). Ribh ne reçoit ni ne stocke tes données de carte ou de paiement. Nous gardons tes identifiants client et abonnement Paddle sur ton profil.</p>
 
   <h2>7. Fonctions d'IA</h2>
   <p>L'app a plusieurs fonctions d'IA : le journal vocal, le studio photo, le chat d'aide, un conseil du jour, Demande à Ribh, la lecture d'un message client collé, la lecture d'une capture de discussion, la lecture d'une photo de produit ou de photos de livraison pour ajouter du stock, et la correspondance des noms de colonnes d'un fichier CSV. Celles que tu peux utiliser dépendent de ton plan. L'app envoie ta demande à notre serveur (Supabase Edge Functions), qui la transmet à Google Gemini. La clé Gemini reste sur le serveur.</p>
@@ -143,7 +143,7 @@
     <li><strong>Apple et Google :</strong> paiements et reçus ; Apple App Attest et DeviceCheck, et Google Play Integrity, pour les vérifications de la section 9 ; connexion Google.</li>
     <li><strong>Resend :</strong> adresses e-mail et contenu des e-mails. Pourquoi : envoyer nos e-mails.</li>
     <li><strong>Open Food Facts et les catalogues de photos de la section 8 :</strong> codes-barres ou noms de produits. Pourquoi : remplir noms et images.</li>
-    <li><strong>Paddle :</strong> paiements des plans web, si tu achètes sur ribh.ma.</li>
+    <li><strong>Paddle :</strong> marchand officiel des paiements des plans web, si tu achètes sur ribh.ma (nom, e-mail, pays et données de paiement, gérés par Paddle).</li>
   </ul>
 
   <h2>13. Où les données sont traitées</h2>

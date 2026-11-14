@@ -70,7 +70,7 @@
   <p>Pro and Expert subscriptions are paid through the Apple App Store or Google Play. We do not receive or store your card or other payment details. Apple and Google handle the payment under their own policies.</p>
   <p>The app uses RevenueCat to manage plans. RevenueCat is set up each time the app starts, for every user, including free users. When you are signed in, RevenueCat identifies you by your Ribh account ID, a random ID that is linked to your account. Before you sign in it uses its own random ID. RevenueCat receives the purchase receipt, product, purchase times and store country from the store, and the standard technical data its software collects, such as IP address and device, operating system and app version. The app does not send your email address, name or phone number to RevenueCat. Our server also asks RevenueCat about your subscription, using your account ID, to confirm your plan.</p>
   <p>RevenueCat sends purchase events to our server. We store each full event (account ID, product, store, price, currency, country, transaction IDs and times) in a log, and we save your plan, plan expiry, billing store and product on your profile.</p>
-  <p>If you buy a plan on the ribh.ma website, payment is handled by Paddle, and we keep your Paddle customer and subscription IDs on your profile.</p>
+  <p>If you buy a plan on the ribh.ma website, the order is handled by Paddle, which is the merchant of record and reseller for web payments. Paddle receives your name, email address, country and payment details, and handles the payment, invoices and refunds itself under its own privacy policy (https://www.paddle.com/legal/privacy). Ribh does not receive or store your card or payment details. We keep your Paddle customer and subscription IDs on your profile.</p>
 
   <h2>7. AI features</h2>
   <p>The app has several AI features: the voice log, the photo studio, the help chat, a daily tip, Ask Ribh, reading a pasted customer message, reading a chat screenshot, reading a product photo or delivery photos to add stock, and matching the column names of a CSV file. Which ones you can use depends on your plan. The app sends your request to our server (Supabase Edge Functions), which sends it on to Google Gemini. We keep the Gemini key on the server.</p>
@@ -142,7 +142,7 @@
     <li><strong>Apple and Google:</strong> payments and receipts; Apple App Attest and DeviceCheck, and Google Play Integrity, for the checks in section 9; Google sign-in.</li>
     <li><strong>Resend:</strong> email addresses and email content. Why: to deliver our emails.</li>
     <li><strong>Open Food Facts and the photo catalogues in section 8:</strong> barcodes or product names. Why: to fill in product names and pictures.</li>
-    <li><strong>Paddle:</strong> web plan payments, if you buy on ribh.ma.</li>
+    <li><strong>Paddle:</strong> merchant of record for web plan payments, if you buy on ribh.ma (name, email, country and payment details, handled by Paddle).</li>
   </ul>
 
   <h2>13. Where data is processed</h2>
